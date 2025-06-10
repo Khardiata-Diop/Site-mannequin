@@ -1,0 +1,472 @@
+
+/* --- Configuration Globale & Variables --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700;800&family=Raleway:wght@300;400;700&display=swap');
+
+:root {
+    --color-background: #FFFFFF;
+    --color-accent: #F7E3C3;
+    --color-text-dark: #36291F;
+    --color-border: #D9D9D9;
+    --color-button: #2C2C2C;
+    --color-button-text: #F5F5F5;
+
+    --font-primary: 'Playfair Display', serif;
+    --font-secondary: 'Raleway', sans-serif;
+}
+
+/* --- Réinitialisation et Styles de Base --- */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-secondary);
+    color: var(--color-text-dark);
+    background-color: var(--color-background);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+img {
+    
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--color-text-dark);
+    text-decoration: none;
+}
+p{
+    color: var(--color-text-dark);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-primary);
+    color: var(--color-text-dark);
+    font-weight: 700;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- En-tête (Header) --- */
+.main-header {
+    background-color: var(--color-accent);
+    padding: 1rem 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+}
+
+.logo-title {
+    display: none; /* Masqué sur mobile par défaut */
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text-dark);
+}
+
+
+/* --- Navigation --- */
+.mobile-nav-toggle {
+    display: block; /* Affiché sur mobile */
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.mobile-nav-toggle .icon-hamburger { display: block; }
+.mobile-nav-toggle .icon-close { display: none; }
+
+.mobile-nav-toggle.is-active .icon-hamburger { display: none; }
+.mobile-nav-toggle.is-active .icon-close { display: block; }
+
+.desktop-nav {
+    display: none; /* Masqué sur mobile */
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    
+    z-index: 1000;
+    transition: left 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-nav.is-open {
+    left: 0;
+}
+
+.mobile-nav ul {
+    background-color: var(--color-accent);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+}
+
+.mobile-nav ul li a {
+    display: block;
+    padding: 1.5rem 0;
+    font-size: 40px;
+    font-family: var(--font-secondary);
+    color: var(--color-text-dark);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.mobile-nav ul li:first-child a {
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.mobile-nav .nav-link.active {
+    font-weight: 700;
+}
+
+
+/* --- Sections Communes --- */
+.section {
+    padding: 60px 0;
+}
+
+.grid-container {
+    display: grid;
+    gap: 40px;
+    align-items: center;
+}
+
+.media-kit-intro img,
+.collaborations-section img {
+
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* --- Pied de page (Footer) --- */
+.main-footer {
+    background-color: var(--color-accent);
+    padding: 40px 0;
+    font-size: 2rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.footer-socials a {
+    display: block;
+	color: var( --color-text-dark);
+	text-decoration: none;
+}
+
+.footer-links {
+    list-style: none;
+    line-height: 1.8
+    
+}
+
+.footer-links .contact-link {
+    font-weight: 700;
+}
+
+.footer-copyright {
+    font-weight: 300;
+    
+}
+
+/* --- Styles Spécifiques aux Pages --- */
+
+/* Page d'accueil */
+.home-intro-grid {
+    display: grid;
+    gap: 50px;
+    margin-top: 40px;
+}
+.intro-card {
+    text-align: center;
+}
+.intro-card img {
+    margin: 0 auto 20px auto;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+.intro-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Page Polaroids */
+.polaroid-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+.polaroid-gallery img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position:center;
+}
+.measurements-section {
+    background-color: var(--color-background);
+}
+.measurements-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+.measurements-group h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.measurements-group ul {
+    list-style: none;
+    font-size: 20px;
+    line-height: 1.5;
+}
+.measurements-global {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+/* Page Kit Média */
+.media-kit-section .grid-container {
+    text-align: center;
+}
+.media-kit-section img {
+    margin: 0 auto 20px auto;
+}
+
+/* Page Contact */
+.contact-grid {
+    display: grid;
+    gap: 40px;
+    align-items: start;
+}
+.contact-text p {
+    margin-top: 20px;
+}
+.contact-form {
+    width: 100%;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 24px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 16px;
+}
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-button);
+    color: var(--color-button-text);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.submit-btn:hover {
+    opacity: 0.9;
+}
+
+
+/* --- Media Queries (Desktop) --- */
+@media (min-width: 992px) {
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 85%;
+    }
+
+    /* Header & Nav Desktop */
+    
+    
+    .mobile-nav-toggle {
+        display: none;
+    }
+
+    .desktop-nav {
+        display: block;
+    }
+
+    .desktop-nav ul {
+        list-style: none;
+        display: flex;
+        gap: 60px;
+    }
+
+    .desktop-nav ul a {
+        font-family: var(--font-primary);
+        font-size: 40px;
+        color: var(--color-text-dark);
+        position: relative;
+    }
+    .desktop-nav .nav-link.active {
+        font-weight: 700;
+    }
+    .desktop-nav .nav-link:not(.active) {
+        font-weight: 400;
+    }
+
+    /* Footer Desktop */
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+    .footer-section {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        flex-direction : column-reverse ;
+    }
+    .footer-copyright { order: -1; } /* Mettre le copyright à gauche */
+    
+    /* Page d'accueil Desktop */
+    .home-hero-title {
+        font-size: 64px;
+        text-align: left;
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+    .home-intro-grid {
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+    }
+    .intro-card img {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    /* Page Polaroids Desktop */
+    .page-title {
+        font-size: 48px;
+    }
+    .polaroid-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .measurements-content {
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+    }
+     .measurements-global {
+        margin-top: 0;
+    }
+
+    /* Page Kit Média Desktop */
+    .media-kit-intro {
+        grid-template-columns: 2fr 1fr;
+        text-align: left;
+    }
+    .media-kit-intro h2 { font-size: 40px; }
+    .media-kit-intro p { font-size: 32px; }
+
+    .media-kit-section .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+     .media-kit-section .grid-container.reversed {
+        grid-template-columns: 1fr 1fr;
+    }
+    .media-kit-section .grid-container.reversed .media-image {
+        order: -1;
+    }
+
+    .collaborations-section .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+     .collaborations-section .section-title {
+        grid-column: 1 / -1; /* Titre sur toute la largeur */
+    }
+
+    /* Page Contact Desktop */
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+    }
+    .contact-text h2 { font-size: 40px; }
+    .contact-text p { font-size: 24px; }
+}
