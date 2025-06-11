@@ -35,6 +35,10 @@
                             <input type="text" id="name" name="name" placeholder="Votre prénom" required>
                         </div>
                         <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <input type="text" id="subject" name="subject" placeholder="Le sujet de votre message" required>
+                        </div>
+                        <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
                         </div>

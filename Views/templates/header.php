@@ -19,17 +19,17 @@
     <header class="main-header">
         <div class="header-container">
             <div class="logo">
-                <a href="<?= $baseUrl ?>/Views/homepage.php" aria-label="Retour à la page d'accueil">
+                <a href="<?= $baseUrl ?>/index.php?page=homepage" aria-label="Retour à la page d'accueil">
                     <img src="<?= $baseUrl ?>/assets/images/logo.png" alt="Logo de Khardiata">
 
                 </a>
             </div>
             <nav class="desktop-nav" aria-label="Navigation principale">
                 <ul>
-                    <li><a href="<?= $baseUrl ?>/Views/homepage.php" class="nav-link active <?= ($currentPage === 'homepage') ? 'active' : '' ?>">Accueil</a></li>
-                    <li><a href="<?= $baseUrl ?>/Views/polaroids.php" class="nav-link <?= ($currentPage === 'polaroids') ? 'active' : '' ?>">Polaroids</a></li>
-                    <li><a href="<?= $baseUrl ?>/Views/mediakit.php" class="nav-link <?= ($currentPage === 'mediakit') ? 'active' : '' ?>">Kit Média</a></li>
-                    <li><a href="<?= $baseUrl ?>/Views/contact.php" class="nav-link <?= ($currentPage === 'contact') ? 'active' : '' ?>">Contact</a></li>
+                    <li><a href="<?= $baseUrl ?>/index.php?page=homepage" class="nav-link active <?= ($currentPage === 'homepage') ? 'active' : '' ?>">Accueil</a></li>
+                    <li><a href="<?= $baseUrl ?>/index.php?page=polaroids" class="nav-link <?= ($currentPage === 'polaroids') ? 'active' : '' ?>">Polaroids</a></li>
+                    <li><a href="<?= $baseUrl ?>/index.php?page=mediakit" class="nav-link <?= ($currentPage === 'mediakit') ? 'active' : '' ?>">Kit Média</a></li>
+                    <li><a href="<?= $baseUrl ?>/index.php?page=contact" class="nav-link <?= ($currentPage === 'contact') ? 'active' : '' ?>">Contact</a></li>
                 </ul>
             </nav>
             <button class="mobile-nav-toggle" aria-controls="mobile-nav" aria-expanded="false" aria-label="Ouvrir le menu">
@@ -41,9 +41,9 @@
 
     <nav class="mobile-nav" id="mobile-nav" aria-label="Navigation mobile">
         <ul>
-            <li><a href="<?= $baseUrl ?>/Views/homepage.php" class="nav-link <?= ($currentPage === 'homepage') ? 'active' : '' ?>" >Accueil</a></li>
-            <li><a href="<?= $baseUrl ?>/Views/polaroids.php" class="nav-link <?= ($currentPage === 'polaroids') ? 'active' : '' ?>">Polaroids</a></li>
-            <li><a href="<?= $baseUrl ?>/Views/mediakit.php" class="nav-link <?= ($currentPage === 'mediakit') ? 'active' : '' ?>">Kit Média</a></li>
-            <li><a href="<?= $baseUrl ?>/Views/contact.php" class="nav-link <?= ($currentPage === 'contact') ? 'active' : '' ?>">Contact</a></li>
+            <li><a href="<?= $baseUrl ?>/index.php?page=homepage" class="nav-link <?= ($currentPage === 'homepage') ? 'active' : '' ?>" >Accueil</a></li>
+            <li><a href="<?= $baseUrl ?>/index.php?page=polaroids" class="nav-link <?= ($currentPage === 'polaroids') ? 'active' : '' ?>">Polaroids</a></li>
+            <li><a href="<?= $baseUrl ?>/index.php?page=mediakit" class="nav-link <?= ($currentPage === 'mediakit') ? 'active' : '' ?>">Kit Média</a></li>
+            <li><a href="<?= $baseUrl ?>/index.php?page=contact" class="nav-link <?= ($currentPage === 'contact') ? 'active' : '' ?>">Contact</a></li>
         </ul>
     </nav>

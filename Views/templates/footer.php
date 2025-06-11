@@ -11,7 +11,7 @@
             <ul class="footer-links">
                 <li><a href="<?= $baseUrl ?>/assets/docs/Politique de confidentialité RGPD.pdf" target="_blank">Politique de confidentialité</a></li>
                 <li><a href="<?= $baseUrl ?>/assets/docs/Mentions légales.pdf" target="_blank" >Mentions légales</a></li>
-                <li><a href="/<?= $baseUrl ?>Views/contact.php" class="contact-link">Me contacter</a></li>
+                <li><a href="<?= $baseUrl ?>/index.php?page=contact" class="contact-link">Me contacter</a></li>
             </ul>
         </div>
     </footer>

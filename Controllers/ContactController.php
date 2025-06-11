@@ -58,7 +58,7 @@ class ContactController {
         if (empty($surname)) $errors['surname'] = "Le nom est requis.";
         if (empty($name)) $errors['name'] = "Le prénom est requis.";
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors['email'] = "L'adresse email n'est pas valide.";
-        if (empty($subject)) $errors['subject'] = "Le sujet du message ne peut pas être vide.";
+        if (empty($subject)) $errors['subject'] = "Le sujet est requis.";
         if (empty($message)) $errors['message'] = "Le message ne peut pas être vide.";
 
         // Si des erreurs sont trouvées, les stocker en session et rediriger vers le formulaire

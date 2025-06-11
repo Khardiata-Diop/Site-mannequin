@@ -16,8 +16,8 @@ class MessageModel {
             return $stmt->execute([
                 ':name'    => $name,
                 ':surname' => $surname,
-                ':subject' => $subject,
                 ':email'   => $email,
+                ':subject' => $subject,
                 ':message' => $message
             ]);
         } catch (\PDOException $e) {
