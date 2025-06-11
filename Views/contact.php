@@ -25,7 +25,7 @@
                         <p>Besoin d’un mannequin détail mains pour vos projets ? Khardiata met son expérience et son savoir-faire à votre disposition. N’hésitez pas à la contacter pour en savoir plus !</p>
                     </div>
 
-                    <form class="contact-form" action="votre_script_de_traitement.php" method="POST">
+                    <form class="contact-form" action="index.php?page=contact-submit" method="POST">
                         <div class="form-group">
                             <label for="surname">Nom</label>
                             <input type="text" id="surname" name="surname" placeholder="Votre nom de famille" required>
