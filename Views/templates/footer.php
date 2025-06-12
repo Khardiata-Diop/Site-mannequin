@@ -9,14 +9,14 @@
                 </ul>
             </div>
             <ul class="footer-links">
-                <li><a href="<?= $baseUrl ?>/assets/docs/Politique de confidentialité RGPD.pdf" target="_blank">Politique de confidentialité</a></li>
-                <li><a href="<?= $baseUrl ?>/assets/docs/Mentions légales.pdf" target="_blank" >Mentions légales</a></li>
+                <li><a href="<?= $baseUrl ?>/assets/docs/PolitiquedeconfidentialitéRGPD.pdf" target="_blank">Politique de confidentialité</a></li>
+                <li><a href="<?= $baseUrl ?>/assets/docs/Mentionslégales.pdf" target="_blank" >Mentions légales</a></li>
                 <li><a href="<?= $baseUrl ?>/index.php?page=contact" class="contact-link">Me contacter</a></li>
             </ul>
         </div>
     </footer>
 
 
-    <script type="text/javascript" src="<?= $baseUrl ?>/assets/js/main.js"></script>
+    <script src="<?= $baseUrl ?>/assets/js/main.js"></script>
 </body>
 </html>
