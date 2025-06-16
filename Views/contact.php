@@ -20,7 +20,7 @@
             
                 <div class="contact-grid">
                     <div class="contact-text">
-                        <img src="<?= $baseUrl ?>/assets/images/contact.jpg" alt="Studio photo, invitant au contact">
+                        <img src="<?= $baseUrl ?>/assets/images/contact.png" alt="Studio photo, invitant au contact">
                         <h2>Échangeons sur Votre Projet !</h2>
                         <p>Besoin d’un mannequin détail mains pour vos projets ? Khardiata met son expérience et son savoir-faire à votre disposition. N’hésitez pas à la contacter pour en savoir plus !</p>
                     </div>

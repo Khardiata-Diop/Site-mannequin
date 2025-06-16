@@ -3,15 +3,15 @@
             <div class="container">
                 <h1 class="page-title"> Mes polaroids</h1>
                 <div class="polaroid-gallery">
-                    <figure><img src="<?= $baseUrl ?>/assets/images/pola1.jpg" alt="Polaroid de mains, pose 1"></figure>
-                    <figure><img src="<?= $baseUrl ?>/assets/images/pola2.jpg" alt="Polaroid de mains, pose 2"></figure>
-                    <figure><img src="<?= $baseUrl ?>/assets/images/pola3.jpg" alt="Polaroid de mains, pose 3"></figure>
-                    <figure><img src="<?= $baseUrl ?>/assets/images/pola4.jpg" alt="Polaroid de mains, pose 4"></figure>
-                    <figure><img src="<?= $baseUrl ?>/assets/images/pola5.jpg" alt="Polaroid de mains, pose 5"></figure>
-                    <figure><img src="<?= $baseUrl ?>/assets/images/pola6.jpg" alt="Polaroid de mains, pose 6"></figure>
-                    <figure><img src="<?= $baseUrl ?>/assets/images/pola7.jpg" alt="Polaroid de mains, pose 7"></figure>
-                    <figure><img src="<?= $baseUrl ?>/assets/images/pola8.jpg" alt="Polaroid de mains, pose 8"></figure>
-                    <figure><img src="<?= $baseUrl ?>/assets/images/pola9.jpg" alt="Polaroid de mains, pose 9"></figure>
+                    <figure><img src="<?= $baseUrl ?>/assets/images/pola1.png" alt="Polaroid de mains, pose 1"></figure>
+                    <figure><img src="<?= $baseUrl ?>/assets/images/pola2.png" alt="Polaroid de mains, pose 2"></figure>
+                    <figure><img src="<?= $baseUrl ?>/assets/images/pola3.png" alt="Polaroid de mains, pose 3"></figure>
+                    <figure><img src="<?= $baseUrl ?>/assets/images/pola4.png" alt="Polaroid de mains, pose 4"></figure>
+                    <figure><img src="<?= $baseUrl ?>/assets/images/pola5.png" alt="Polaroid de mains, pose 5"></figure>
+                    <figure><img src="<?= $baseUrl ?>/assets/images/pola6.png" alt="Polaroid de mains, pose 6"></figure>
+                    <figure><img src="<?= $baseUrl ?>/assets/images/pola7.png" alt="Polaroid de mains, pose 7"></figure>
+                    <figure><img src="<?= $baseUrl ?>/assets/images/pola8.png" alt="Polaroid de mains, pose 8"></figure>
+                    <figure><img src="<?= $baseUrl ?>/assets/images/pola9.png" alt="Polaroid de mains, pose 9"></figure>
                 </div>
             </div>
         </section>

@@ -37,9 +37,9 @@
             <div class="container">
                 <h2 class="section-title">Collaborations précédentes</h2>
                 <div class="grid-container">
-                    <figure><img src="<?= $baseUrl ?>/assets/images/collab1.jpg" alt="Collaboration avec une  marque partenaire "></figure>
-                    <figure><img src="<?= $baseUrl ?>/assets/images/collab2.jpg" alt="Collaboration avec une  marque partenaire "></figure>
-                    <figure><img src="<?= $baseUrl ?>/assets/images/collab3.jpg" alt="Collaboration avec une  marque partenaire "></figure>
+                    <figure><img src="<?= $baseUrl ?>/assets/images/collab1.png" alt="Collaboration avec une  marque partenaire "></figure>
+                    <figure><img src="<?= $baseUrl ?>/assets/images/collab2.png" alt="Collaboration avec une  marque partenaire "></figure>
+                    <figure><img src="<?= $baseUrl ?>/assets/images/collab3.png" alt="Collaboration avec une  marque partenaire "></figure>
                 </div>
             </div>
         </section>
