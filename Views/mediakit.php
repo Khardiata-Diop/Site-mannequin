@@ -8,7 +8,7 @@
                         <h2>Collaborez avec une Mannequin Détail Mains Professionnelle</h2>
                         <p>Découvrez l’univers de Khardiata à travers son kit média. Avec une expérience solide, elle met en valeur bijoux, cosmétiques et accessoires avec élégance et précision. Téléchargez son kit média pour en savoir plus.</p>
                     </div>
-                    <img src="<?= $baseUrl ?>/assets/images/kitmedia.jpg" alt="Portrait de Khardiata, professionnelle et souriante">
+                    <img src="<?= $baseUrl ?>/assets/images/kitmedia.png" alt="Portrait de Khardiata, professionnelle et souriante">
                 </div>
             </div>
         </section>

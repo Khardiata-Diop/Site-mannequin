@@ -3,11 +3,26 @@ require_once __DIR__ . '/Database.php';
 
 class MessageModel {
     private $pdo;
+    
+    /**
+     * Constructeur qui charge la connexion PDO via la classe Database.
+     * Aucun paramètre n'est attendu.
+     */
 
     public function __construct() {
         $this->pdo = Database::getConnection();
     }
-
+    /**
+     * Sauvegarde un message de contact envoyé via la page de contact.
+     * 
+     * @param string $name Le prénom du destinataire.
+     * @param string $surname Le nom du destinataire.
+     * @param string $email L'adresse email du destinataire.
+     * @param string $subject Le sujet du message.
+     * @param string $message Le contenu du message.
+     * 
+     * @return bool True si le message a été sauvegardé, false sinon.
+     */
     public function saveMessage(string $name, string $surname, string $email, string $subject, string $message): bool {
         $sql = "INSERT INTO contact_messages (name, surname, email, subject, message) VALUES (:name, :surname, :email, :subject, :message)";
         
