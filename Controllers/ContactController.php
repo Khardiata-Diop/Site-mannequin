@@ -1,7 +1,7 @@
 <?php
 
 // Dépendance vers le modèle qui gère les messages
-    require_once __DIR__ . '/../Models/Message.php';
+    require_once __DIR__ . '/../Models/MessageModel.php';
     
 class ContactController {
     /**

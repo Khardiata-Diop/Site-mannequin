@@ -349,6 +349,24 @@ h1, h2, h3, h4 {
     opacity: 0.9;
 }
 
+/* --- Style pour le lien admin dans le footer --- */
+
+.footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espace entre le copyright et l'icône */
+    justify-content: center; /* Centre les éléments sur mobile */
+}
+
+.admin-login-link {
+    color: var(--color-text-dark);
+    font-size: 1.2rem; /* Taille de l'icône */
+    transition: color 0.3s;
+}
+
+.admin-login-link:hover {
+    color: #000; /* Change la couleur au survol pour montrer que c'est cliquable */
+}
 
 /* --- Media Queries (Desktop) --- */
 @media (min-width: 992px) {
@@ -469,4 +487,15 @@ h1, h2, h3, h4 {
     }
     .contact-text h2 { font-size: 40px; }
     .contact-text p { font-size: 24px; }
+    
+     .footer-legal {
+        justify-content: flex-start; /* Aligne à gauche sur desktop */
+    }
+    /* --- Style pour le lien admin dans le footer --- */
+    /* Dans ton code, tu avais mis un "order: -1" sur le copyright,
+       ce qui le plaçait à gauche. Cette structure respecte ça. */
+    .footer-section {
+        flex-direction: column; /* On remet en colonne dans la version desktop */
+        align-items: flex-start;
+    }
 }

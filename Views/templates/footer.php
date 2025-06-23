@@ -7,6 +7,9 @@
                     <li><a href="https://www.tiktok.com/@kdhandmodel" aria-label="Lien vers Tiktok"><i class="fa-brands fa-tiktok"></i></a></li>
                     <li><a href="https://www.youtube.com/@kdhandmodel" aria-label="Lien vers Youtube"><i class="fa-brands fa-youtube"></i></a></li>
                 </ul>
+                <a href="<?= $baseUrl ?>/index.php?page=login" class="admin-login-link" aria-label="Accès administrateur" title="Accès administrateur">
+                    <i class="fa-solid fa-user-tie"></i>
+                </a>
             </div>
             <ul class="footer-links">
                 <li><a href="<?= $baseUrl ?>/assets/docs/PolitiquedeconfidentialitéRGPD.pdf" target="_blank">Politique de confidentialité</a></li>

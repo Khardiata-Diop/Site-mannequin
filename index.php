@@ -82,6 +82,7 @@ function render_static_page(string $viewName, string $pageTitle, string $current
  */
 require_once __DIR__ . '/Controllers/HomeController.php';
 require_once __DIR__ . '/Controllers/ContactController.php';
+require_once __DIR__ . '/Controllers/AdminController.php';
 
 /**
  * Instancie les contrôleurs.
@@ -93,6 +94,7 @@ require_once __DIR__ . '/Controllers/ContactController.php';
  */
 $homeController = new HomeController($baseUrl);
 $contactController = new ContactController($baseUrl);
+$adminController = new AdminController($baseUrl);
 
 /**
  * Détermine la page à afficher en se basant sur le paramètre 'page' dans l'URL (ex: index.php?page=contact).
@@ -155,6 +157,82 @@ switch ($page) {
          */
         render_static_page('mediakit', 'Kit Média', 'mediakit', $baseUrl);
         break;
+        
+    // --- ROUTES BACK-OFFICE ---
+
+    // -- Connexion / Déconnexion --
+    case 'login':
+        $adminController->showLoginPage();
+        break;
+    
+    case 'login-submit':
+        $adminController->handleLogin();
+        break;
+
+    case 'logout':
+        $adminController->logout();
+        break;
+
+    // -- Dashboard --
+    case 'dashboard':
+        $adminController->showDashboard();
+        break;
+
+    // -- CRUD Articles --
+    case 'admin-articles': // READ (List)
+        $adminController->listArticles();
+        break;
+    
+    case 'create-article': // CREATE (Show form)
+        $adminController->showArticleForm();
+        break;
+        
+    case 'edit-article': // UPDATE (Show form)
+        $adminController->showArticleForm();
+        break;
+
+    case 'save-article': // CREATE & UPDATE (Process form)
+        $adminController->saveArticle();
+        break;
+
+    case 'delete-article': // DELETE (Process)
+        $adminController->deleteArticle();
+        break;
+    
+    // -- CRUD Messages --
+    case 'admin-messages': // READ (List)
+        $adminController->listMessages();
+        break;
+    
+    case 'view-message': // READ (Single)
+        $adminController->showMessage(); // Méthode à créer dans AdminController
+        break;
+        
+    case 'delete-message': // DELETE (Process)
+        $adminController->deleteMessage(); // Méthode à créer dans AdminController
+        break;
+
+    // -- CRUD Utilisateurs --
+    case 'admin-users': // READ (List)
+        $adminController->listUsers();
+        break;
+        
+    case 'create-user': // CREATE (Show form)
+        $adminController->showUserForm(); 
+        break;
+        
+    case 'edit-user': // UPDATE (Show form)
+        $adminController->showUserForm(); 
+        break;
+        
+    case 'save-user': // CREATE & UPDATE (Process form)
+        $adminController->saveUser(); 
+        break;
+        
+    case 'delete-user': // DELETE (Process)
+        $adminController->deleteUser(); 
+        break;
+
         
     /**
      * Cas par défaut, exécuté si la valeur de `$page` ne correspond à aucune route définie.

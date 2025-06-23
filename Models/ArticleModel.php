@@ -7,7 +7,9 @@ class ArticleModel {
     public function __construct() {
         $this->pdo = Database::getConnection();
     }
-
+    
+    // --- READ ---
+    
     /**
      * Récupère tous les articles actifs en utilisant une requête préparée.
      * @return array La liste des articles actifs.
@@ -25,4 +27,51 @@ class ArticleModel {
         // Récupération des résultats sous forme de tableau associatif
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+    
+    public function getAll() {
+        $stmt = $this->pdo->query('SELECT * FROM home_articles ORDER BY display_order ASC');
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function countAll() {
+        return $this->pdo->query('SELECT COUNT(id) FROM home_articles')->fetchColumn();
+    }
+    
+     public function findById(int $id) {
+        $sql = 'SELECT * FROM home_articles WHERE id = :id';
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([':id' => $id]);
+        return $stmt->fetch();
+    }
+    
+    // --- CREATE ---
+    public function create(array $data): bool {
+        $sql = 'INSERT INTO home_articles (title, content, image_path, image_alt, display_order, is_active) 
+                VALUES (:title, :content, :image_path, :image_alt, :display_order, :is_active)';
+        $stmt = $this->pdo->prepare($sql);
+        return $stmt->execute($data);
+    }
+    
+    // --- UPDATE ---
+    public function update(int $id, array $data): bool {
+        $data['id'] = $id;
+        $sql = 'UPDATE home_articles SET 
+                    title = :title, 
+                    content = :content, 
+                    image_path = :image_path, 
+                    image_alt = :image_alt, 
+                    display_order = :display_order, 
+                    is_active = :is_active 
+                WHERE id = :id';
+        $stmt = $this->pdo->prepare($sql);
+        return $stmt->execute($data);
+    }
+    
+    // --- DELETE ---
+    public function delete(int $id): bool {
+        $sql = 'DELETE FROM home_articles WHERE id = :id';
+        $stmt = $this->pdo->prepare($sql);
+        return $stmt->execute([':id' => $id]);
+    }
+
 }

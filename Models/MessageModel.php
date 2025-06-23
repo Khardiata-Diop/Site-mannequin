@@ -40,4 +40,27 @@ class MessageModel {
             return false;
         }
     }
+       
+    
+    public function getAll() {
+        $stmt = $this->pdo->query('SELECT * FROM contact_messages ORDER BY submission_date DESC');
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function countAll() {
+        return $this->pdo->query('SELECT COUNT(id) FROM contact_messages')->fetchColumn();
+    }
+    
+    public function findById(int $id) {
+        $sql = 'SELECT * FROM contact_messages WHERE id = :id';
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([':id' => $id]);
+        return $stmt->fetch();
+    }
+    
+    public function delete(int $id): bool {
+        $sql = 'DELETE FROM contact_messages WHERE id = :id';
+        $stmt = $this->pdo->prepare($sql);
+        return $stmt->execute([':id' => $id]);
+    }
 }
