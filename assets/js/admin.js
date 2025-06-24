@@ -1,6 +1,5 @@
-/**
- * assets/js/admin.js
- * Gère les interactions JavaScript pour le panneau d'administration.
+/*
+  Gère les interactions JavaScript pour le panneau d'administration.
  */
 document.addEventListener('DOMContentLoaded', () => {
 

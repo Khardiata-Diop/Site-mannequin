@@ -1,5 +1,4 @@
 <?php
-// Controllers/AdminController.php
 
 // On charge tous les modèles dont on aura besoin
 require_once __DIR__ . '/../Models/UserModel.php';
@@ -37,7 +36,7 @@ class AdminController
      */
     public function showLoginPage(): void
     {
-        // Récupérer un éventuel message d'erreur de la session
+        // Récupére un éventuel message d'erreur de la session
         $error = $_SESSION['login_error'] ?? null;
         unset($_SESSION['login_error']); // On le supprime pour qu'il ne s'affiche qu'une fois
 
@@ -199,7 +198,7 @@ public function listMessages(): void
         if (isset($_GET['id'])) {
             $article = $articleModel->findById((int)$_GET['id']);
             if (!$article) {
-                // Gérer le cas où l'article n'existe pas
+                // Gére le cas où l'article n'existe pas
                 // header('Location: ...'); exit;
             }
         }
@@ -229,7 +228,7 @@ public function listMessages(): void
         $id = isset($_GET['id']) ? (int)$_GET['id'] : null;
         $articleModel = new ArticleModel();
 
-        // 1. Récupérer et nettoyer les données du formulaire
+        // 1. Récupére et nettoye les données du formulaire
         $data = [
             'title' => trim($_POST['title'] ?? ''),
             'content' => trim($_POST['content'] ?? ''),
@@ -238,7 +237,7 @@ public function listMessages(): void
             'is_active' => isset($_POST['is_active']) ? 1 : 0
         ];
 
-        // 2. Gérer l'upload de l'image
+        // 2. Gére l'upload de l'image
         // Si une nouvelle image est uploadée
         if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
             $uploadDir = __DIR__ . '/../assets/images/';
@@ -248,7 +247,7 @@ public function listMessages(): void
             if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadFile)) {
                 $data['image_path'] = '/assets/images/' . $filename;
             } else {
-                // Gérer l'erreur d'upload
+                // Gére l'erreur d'upload
                 // $_SESSION['error_message'] = "Erreur lors de l'upload de l'image.";
                 // header('Location: ...'); exit;
             }
@@ -264,14 +263,14 @@ public function listMessages(): void
             }
         }
 
-        // 3. Sauvegarder en base de données
+        // 3. Sauvegarde en base de données
         if ($id) { // Mise à jour
             $articleModel->update($id, $data);
         } else { // Création
             $articleModel->create($data);
         }
 
-        // 4. Rediriger vers la liste des articles
+        // 4. Redirige vers la liste des articles
         header('Location: ' . $this->baseUrl . '/index.php?page=admin-articles');
         exit;
     }

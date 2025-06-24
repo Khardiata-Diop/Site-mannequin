@@ -183,19 +183,19 @@ switch ($page) {
         $adminController->listArticles();
         break;
     
-    case 'create-article': // CREATE (Show form)
+    case 'create-article': // CREATE 
         $adminController->showArticleForm();
         break;
         
-    case 'edit-article': // UPDATE (Show form)
+    case 'edit-article': // UPDATE 
         $adminController->showArticleForm();
         break;
 
-    case 'save-article': // CREATE & UPDATE (Process form)
+    case 'save-article': // CREATE & UPDATE 
         $adminController->saveArticle();
         break;
 
-    case 'delete-article': // DELETE (Process)
+    case 'delete-article': // DELETE 
         $adminController->deleteArticle();
         break;
     
@@ -205,31 +205,31 @@ switch ($page) {
         break;
     
     case 'view-message': // READ (Single)
-        $adminController->showMessage(); // Méthode à créer dans AdminController
+        $adminController->showMessage(); 
         break;
         
-    case 'delete-message': // DELETE (Process)
-        $adminController->deleteMessage(); // Méthode à créer dans AdminController
+    case 'delete-message': // DELETE 
+        $adminController->deleteMessage(); 
         break;
 
     // -- CRUD Utilisateurs --
-    case 'admin-users': // READ (List)
+    case 'admin-users': // READ 
         $adminController->listUsers();
         break;
         
-    case 'create-user': // CREATE (Show form)
+    case 'create-user': // CREATE 
         $adminController->showUserForm(); 
         break;
         
-    case 'edit-user': // UPDATE (Show form)
+    case 'edit-user': // UPDATE 
         $adminController->showUserForm(); 
         break;
         
-    case 'save-user': // CREATE & UPDATE (Process form)
+    case 'save-user': // CREATE & UPDATE 
         $adminController->saveUser(); 
         break;
         
-    case 'delete-user': // DELETE (Process)
+    case 'delete-user': // DELETE 
         $adminController->deleteUser(); 
         break;
 

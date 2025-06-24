@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Gère la connexion à la base de données via le pattern Singleton.
+ * Gère la connexion à la base de données .
  *
  * Cette classe fournit un point d'accès unique et global à l'objet de connexion PDO.
  * Elle s'assure qu'une seule connexion est créée par requête (lazy initialization), 

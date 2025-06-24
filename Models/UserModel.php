@@ -1,6 +1,4 @@
 <?php
-// Models/UserModel.php
-
 require_once __DIR__ . '/Database.php';
 
 /**
@@ -67,7 +65,7 @@ class UserModel {
     }
     
     // --- Méthodes pour le CRUD (Create, Read, Update, Delete) ---
-    // Ces méthodes seront utiles quand tu voudras ajouter, modifier ou supprimer des utilisateurs.
+    // Ces méthodes seront utiles afin d'ajouter, de modifier ou de supprimer des utilisateurs.
 
     /**
      * Crée un nouvel utilisateur.

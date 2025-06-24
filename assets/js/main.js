@@ -13,7 +13,7 @@ mobileNavToggle.addEventListener('click', () => {
     mobileNavToggle.classList.toggle('is-active');
 });
 
-// Optionnel : fermer le menu en cliquant sur un lien
+//  ferme le menu en cliquant sur un lien
 document.querySelectorAll('.mobile-nav a').forEach(link => {
     link.addEventListener('click', () => {
         mobileNav.classList.remove('is-open');

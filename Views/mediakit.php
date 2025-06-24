@@ -6,9 +6,9 @@
                 <div class="grid-container media-kit-intro">
                     <div>
                         <h2>Collaborez avec une Mannequin Détail Mains Professionnelle</h2>
-                        <p>Découvrez l’univers de Khardiata à travers son kit média. Avec une expérience solide, elle met en valeur bijoux, cosmétiques et accessoires avec élégance et précision. Téléchargez son kit média pour en savoir plus.</p>
+                        <p>Découvrez l’univers de Khardiata à travers son kit média. Avec une expérience solide, elle met en valeur bijoux, cosmétiques et accessoires avec élégance et précision. </p>
                     </div>
-                    <img src="<?= $baseUrl ?>/assets/images/kitmedia.png" alt="Portrait de Khardiata, professionnelle et souriante">
+                    <img src="<?= $baseUrl ?>/assets/images/kitmedia.png" alt="Portrait professionnel des mains de Khardiata">
                 </div>
             </div>
         </section>
@@ -19,7 +19,7 @@
                     <h2 class="section-title">Démographie des audiences</h2>
                     
                 </div>
-                <img src="<?= $baseUrl ?>/assets/images/croquistablette.png" alt="Graphique illustrant la démographie de l'audience" class="media-image">
+                <img src="<?= $baseUrl ?>/assets/images/croquistablette.png" alt="Graphique illustrant la démographie de l'audience de Khardiata" class="media-image">
             </div>
         </section>
 
@@ -29,7 +29,7 @@
                     <h2 class="section-title">Tarifs & Offres</h2>
                     
                 </div>
-                <img src="<?= $baseUrl ?>/assets/images/tarifs.png" alt="Image représentant les offres et tarifs" class="media-image">
+                <img src="<?= $baseUrl ?>/assets/images/tarifs.png" alt="Image représentant les offres et tarifs de Khardiata" class="media-image">
             </div>
         </section>
 

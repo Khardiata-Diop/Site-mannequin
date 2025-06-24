@@ -43,12 +43,16 @@ class MessageModel {
        
     
     public function getAll() {
-        $stmt = $this->pdo->query('SELECT * FROM contact_messages ORDER BY submission_date DESC');
+        $stmt = $this->pdo->prepare('SELECT * FROM contact_messages ORDER BY submission_date DESC');
+        $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function countAll() {
-        return $this->pdo->query('SELECT COUNT(id) FROM contact_messages')->fetchColumn();
+        $stmt = $this->pdo->prepare('SELECT COUNT(id) FROM contact_messages');
+        $stmt->execute();
+        return $stmt->fetchColumn();
+       
     }
     
     public function findById(int $id) {

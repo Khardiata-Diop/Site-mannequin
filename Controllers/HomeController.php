@@ -21,11 +21,11 @@ class HomeController {
      * Méthode principale pour afficher la page d'accueil.
      */
     public function index() {
-        // 1. Demander les données au Modèle
+        // 1. Demande les données au Modèle
         $articleModel = new ArticleModel();
         $articles = $articleModel->getActiveArticles();
         
-        // 2. Préparer les données pour la Vue et appeler la méthode render
+        // 2. Prépare les données pour la Vue et appeler la méthode render
         $this->render('homepage', [
             'articles' => $articles,
             'pageTitle' => "Accueil",

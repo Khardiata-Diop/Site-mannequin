@@ -29,12 +29,16 @@ class ArticleModel {
     }
     
     public function getAll() {
-        $stmt = $this->pdo->query('SELECT * FROM home_articles ORDER BY display_order ASC');
+        $stmt = $this->pdo->prepare('SELECT * FROM home_articles ORDER BY display_order ASC');
+        $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
     }
 
     public function countAll() {
-        return $this->pdo->query('SELECT COUNT(id) FROM home_articles')->fetchColumn();
+        $stmt = $this->pdo->prepare('SELECT COUNT(id) FROM home_articles');
+        $stmt->execute();
+        return $stmt->fetchColumn();
     }
     
      public function findById(int $id) {
